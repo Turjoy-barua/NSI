@@ -14,7 +14,7 @@ class AdresseIP:
         réservée, False sinon"""
         # Adresses réservées : 192.168.0.0, 192.168.0.255, 127.0.0.1
         reservees = ["192.168.0.0", "192.168.0.255", "127.0.0.1" ]
-        return ...
+        return ()
     
     def adresse_suivante(self):
         """Renvoie un objet AdresseIP avec l'adresse IP qui suit
