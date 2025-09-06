@@ -1,3 +1,5 @@
+
+
 def dichotomie(tab, x):
     """Applique une recherche dichotomique pour déterminer
     si x est dans le tableau trié tab.
