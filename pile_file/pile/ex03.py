@@ -1,4 +1,4 @@
-
+# https://alexcraipeau.github.io/nsi/TNSI/SEQ2_piles_files/SEQ2_2_piles_exercices/
 class Pile:
     def __init__(self):
         self ._elements = []
