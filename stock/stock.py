@@ -23,6 +23,14 @@ class Stock:
             res = res + 1
         return res
     
+    
+def nb_brioches(liste_stocks):
+    total = 0
+    for st in liste_stocks:
+        total += st.produire()
+    return total
+
+
 mon_stock=Stock()
 mon_stock.ajouter_beurre(1000)
 mon_stock.ajouter_farine(1000)
