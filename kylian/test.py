@@ -36,12 +36,12 @@ def jeu() :
                 p=random.randint(0, len(indices) - 1)
                 print(indices[p])
                 nouveaux_indices = []
-                print(nouveaux_indices)
+               
                 nouveaux_indices.append(indices[p])
                 indices.pop(p)
                 n = n - 10
             elif n == 0 :
-                b=random.randint(0, len(nouveaux_indices) - 1)
+                b=random.randint(0, len(nouveaux_indices) - 1) # --> here its gets 0 thats why the program breaks
                 print(nouveaux_indices[b])
                 indices = []
                 indices.append(nouveaux_indices[b])
@@ -54,6 +54,7 @@ def jeu() :
             trouver_item(item)
             lieux.pop(lieu_fouillé)
         lieu_fouillé=str(input("où fouilles-tu ? "))
+        print(nouveaux_indices)
 
    
     print("voilà le monstre ! vous vous faîtes manger.")
