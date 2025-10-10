@@ -26,24 +26,21 @@ def jeu() :
 
     n=30
     m=0
-
+    nouveaux_indices = []
     while lieu_fouillé != lieux[monstre] :
         if lieu_fouillé not in lieux :
             if m == 0 :
                 n = 30
                 m = 30
-            elif n > 0 :
+            elif n > 0 and not len(indices) == 0:
                 p=random.randint(0, len(indices) - 1)
                 print(indices[p])
-                nouveaux_indices = []
-               
                 nouveaux_indices.append(indices[p])
                 indices.pop(p)
                 n = n - 10
-            elif n == 0 :
-                b=random.randint(0, len(nouveaux_indices) - 1) # --> here its gets 0 thats why the program breaks
+            elif n == 0 and len(nouveaux_indices) != 0:
+                b = random.randint(0, len(nouveaux_indices) - 1) # --> here its gets 0 thats why the program breaks
                 print(nouveaux_indices[b])
-                indices = []
                 indices.append(nouveaux_indices[b])
                 nouveaux_indices.pop(b)
                 m = m - 10
@@ -54,8 +51,9 @@ def jeu() :
             trouver_item(item)
             lieux.pop(lieu_fouillé)
         lieu_fouillé=str(input("où fouilles-tu ? "))
-        print(nouveaux_indices)
-
+        print(f"indices {indices}\n")
+        print(f"nouveau {nouveaux_indices}\n")
+        
    
     print("voilà le monstre ! vous vous faîtes manger.")
 jeu()
