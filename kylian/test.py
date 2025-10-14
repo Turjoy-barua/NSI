@@ -23,16 +23,17 @@ def jeu() :
     print("Tu te trouves dans une mysterieuse chambre, un monstre s'y cache. Ne le trouve pas ou il te mangera.")
 
     lieu_fouillé = str(input("où fouilles-tu ? "))
-
+    def values():
+        return 30, 30
     n=30
     m=0
     nouveaux_indices = []
     while lieu_fouillé != lieux[monstre] :
         if lieu_fouillé not in lieux :
-            if m == 0 :
-                n = 30
-                m = 30
-            elif n > 0 and not len(indices) == 0:
+            #if m == 0:
+            #   n = 30
+            #  m = 30
+            if n > 0 and not len(indices) == 0:
                 p=random.randint(0, len(indices) - 1)
                 print(indices[p])
                 nouveaux_indices.append(indices[p])
@@ -44,6 +45,8 @@ def jeu() :
                 indices.append(nouveaux_indices[b])
                 nouveaux_indices.pop(b)
                 m = m - 10
+                if len(nouveaux_indices) == 0:
+                    n, m = values()
             else :
                 print("oula")
                
