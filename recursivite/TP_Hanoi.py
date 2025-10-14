@@ -41,7 +41,7 @@ def Hanoi(n, dep = 'départ', inter = 'intermédiaire', arr='arrivée'):
         Hanoi(n-1, inter, dep, arr )
         
         
-n = 4
+n = 10
 tours = dict()
 tours['départ'] = [j for j in range(n,0,-1)]
 tours['intermédiaire'] = []
