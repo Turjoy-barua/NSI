@@ -1,0 +1,2 @@
+algorithme:
+    une suite ordonee d'instructions pourtant de resoudre un problème 
